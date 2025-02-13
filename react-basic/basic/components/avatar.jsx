@@ -1,14 +1,13 @@
 import React from 'react'
 
-export default function profile({image, name, title}) {
+export default function Avatar({image, isNew}) {
   return (
-    <div className='profile'>
+    <div className='avatar'>
         <img
         className='photo'
         src={image}
         alt="avatar" />
-        <h1>{name}</h1>
-        <p>{title}</p>
+        {isNew && <span className='new'>New</span>}
     </div>
   )
 }
